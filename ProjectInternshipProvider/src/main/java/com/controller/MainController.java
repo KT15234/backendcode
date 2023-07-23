@@ -13,7 +13,6 @@ import com.service.RecruiterService;
 
 import java.util.List;
 
-//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 //@RequestMapping("/api")
 public class MainController {
@@ -137,8 +136,8 @@ public class MainController {
 	}
 
 	@GetMapping("/recruiters/{id}")
-	public ResponseEntity<Recruiter> getRecruiterById(@PathVariable("id") Long rec_id) {
-		Recruiter recruiter = recruiterService.getRecruiterById(rec_id);
+	public ResponseEntity<Recruiter> getRecruiterById(@PathVariable("id") Long id) {
+		Recruiter recruiter = recruiterService.getRecruiterById(id);
 		if (recruiter != null) {
 			return new ResponseEntity<>(recruiter, HttpStatus.OK);
 		} else {
@@ -163,8 +162,8 @@ public class MainController {
 	}
 
 	@DeleteMapping("/recruiters/{id}")
-	public ResponseEntity<Void> deleteRecruiter(@PathVariable("id") Long rec_id) {
-		boolean deleted = recruiterService.deleteRecruiter(rec_id);
+	public ResponseEntity<Void> deleteRecruiter(@PathVariable("id") Long id) {
+		boolean deleted = recruiterService.deleteRecruiter(id);
 		if (deleted) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} else {

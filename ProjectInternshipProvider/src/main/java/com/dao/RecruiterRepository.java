@@ -8,7 +8,7 @@ import com.model.Recruiter;
 
 public interface RecruiterRepository extends JpaRepository<Recruiter,Long>{
 
-	Optional<Recruiter> findById(Long rec_id);
+	Optional<Recruiter> findById(Long id);
 
 
 }

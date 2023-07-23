@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 @Entity
 public class Interns {
 
@@ -21,18 +22,15 @@ public class Interns {
 	private String userName;
 	private String password;
 	private String marital_status;
-
 	
 	@ManyToOne
 	private Recruiter recruiter;
 	
 
-
 	public Interns() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-
 
 
 	public Interns(Long id, String firstName, String lastName, String email, String phoneNumber, String qualification,
@@ -52,11 +50,9 @@ public class Interns {
 	}
 
 
-
 	public Long getId() {
 		return id;
 	}
-
 
 
 	public void setId(Long id) {
@@ -64,11 +60,9 @@ public class Interns {
 	}
 
 
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 
 
 	public void setFirstName(String firstName) {
@@ -76,11 +70,9 @@ public class Interns {
 	}
 
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 
 	public void setLastName(String lastName) {
@@ -88,11 +80,9 @@ public class Interns {
 	}
 
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 
 	public void setEmail(String email) {
@@ -100,11 +90,9 @@ public class Interns {
 	}
 
 
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 
 
 	public void setPhoneNumber(String phoneNumber) {
@@ -112,11 +100,9 @@ public class Interns {
 	}
 
 
-
 	public String getQualification() {
 		return qualification;
 	}
-
 
 
 	public void setQualification(String qualification) {
@@ -124,11 +110,9 @@ public class Interns {
 	}
 
 
-
 	public String getLocation() {
 		return location;
 	}
-
 
 
 	public void setLocation(String location) {
@@ -136,11 +120,9 @@ public class Interns {
 	}
 
 
-
 	public String getUserName() {
 		return userName;
 	}
-
 
 
 	public void setUserName(String userName) {
@@ -148,11 +130,9 @@ public class Interns {
 	}
 
 
-
 	public String getPassword() {
 		return password;
 	}
-
 
 
 	public void setPassword(String password) {
@@ -160,11 +140,9 @@ public class Interns {
 	}
 
 
-
 	public String getMarital_status() {
 		return marital_status;
 	}
-
 
 
 	public void setMarital_status(String marital_status) {
@@ -172,11 +150,9 @@ public class Interns {
 	}
 
 
-
 	public Recruiter getRecruiter() {
 		return recruiter;
 	}
-
 
 
 	public void setRecruiter(Recruiter recruiter) {
@@ -184,14 +160,8 @@ public class Interns {
 	}
 
 
-	}
-
 
 	
 
 
-
-	
-
-
-
+}

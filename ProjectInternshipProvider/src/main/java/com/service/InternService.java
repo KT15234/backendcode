@@ -7,7 +7,7 @@ import com.model.Interns;
 
 
 public interface InternService {
-		List<Interns> getAllInterns();
+	 List<Interns> getAllInterns();
 	    Interns getInternById(Long id);
 	    Interns createIntern(Interns intern);
 	    Interns updateIntern(Long id, Interns intern);

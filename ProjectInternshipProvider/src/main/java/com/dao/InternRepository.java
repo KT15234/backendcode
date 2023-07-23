@@ -6,9 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.model.Interns;
 
-public interface InternRepository extends JpaRepository<Interns,Long>{
+public interface InternRepository extends JpaRepository<Interns,Integer>{
 
 	Optional<Interns> findById(Long id);
-	
 	
 }

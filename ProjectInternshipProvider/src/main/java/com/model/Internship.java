@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-
 @Entity
 public class Internship {
 	
@@ -24,12 +23,13 @@ public class Internship {
 	@OneToOne
 	private Interns interns;
 	
-
 	public Internship() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
+	
+	
 	public Internship(long id, String company_name, String domain, String duration, String location,
 			Recruiter recruiter, Interns interns) {
 		super();
@@ -41,6 +41,31 @@ public class Internship {
 		this.recruiter = recruiter;
 		this.interns = interns;
 	}
+
+
+
+	public Internship(long id, String company_name, String domain, String duration, String location,
+			Recruiter recruiter) {
+		super();
+		this.id = id;
+		this.company_name = company_name;
+		this.domain = domain;
+		this.duration = duration;
+		this.location = location;
+		this.recruiter = recruiter;
+	}
+
+
+	public Internship(long id, String company_name, String domain, String duration, String location) {
+		super();
+		this.id = id;
+		this.company_name = company_name;
+		this.domain = domain;
+		this.duration = duration;
+		this.location = location;
+	
+	}
+
 
 	public long getId() {
 		return id;
@@ -82,23 +107,27 @@ public class Internship {
 		this.location = location;
 	}
 
+
 	public Recruiter getRecruiter() {
 		return recruiter;
 	}
+
 
 	public void setRecruiter(Recruiter recruiter) {
 		this.recruiter = recruiter;
 	}
 
+
+
 	public Interns getInterns() {
 		return interns;
 	}
 
+
+
 	public void setInterns(Interns interns) {
 		this.interns = interns;
 	}
-
-	
 	
 	
 }

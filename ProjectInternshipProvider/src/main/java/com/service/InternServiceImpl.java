@@ -42,7 +42,6 @@ public class InternServiceImpl implements InternService {
             existingIntern.setPhoneNumber(intern.getPhoneNumber());
             existingIntern.setMarital_status(intern.getMarital_status());
             existingIntern.setQualification(intern.getQualification());
-            existingIntern.setLocation(intern.getLocation());
            
             return internRepository.save(existingIntern);
         }

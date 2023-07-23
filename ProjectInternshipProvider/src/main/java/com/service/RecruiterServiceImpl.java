@@ -23,8 +23,8 @@ public class RecruiterServiceImpl implements RecruiterService {
     }
 
     @Override
-    public Recruiter getRecruiterById(Long rec_id) {
-        return recruiterRepository.findById(rec_id).orElse(null);
+    public Recruiter getRecruiterById(Long id) {
+        return recruiterRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class RecruiterServiceImpl implements RecruiterService {
 
     @Override
     public Recruiter updateRecruiter( Recruiter recruit) {
-        Recruiter existingRecruiter = recruiterRepository.findById(recruit.getRec_id()).orElse(null);
+        Recruiter existingRecruiter = recruiterRepository.findById(recruit.getId()).orElse(null);
         if (existingRecruiter != null) {
             existingRecruiter.setRecName(recruit.getRecName());
            
@@ -48,8 +48,8 @@ public class RecruiterServiceImpl implements RecruiterService {
     }
 
     @Override
-    public boolean deleteRecruiter(Long rec_id) {
-        Recruiter existingRecruiter = recruiterRepository.findById(rec_id).orElse(null);
+    public boolean deleteRecruiter(Long id) {
+        Recruiter existingRecruiter = recruiterRepository.findById(id).orElse(null);
         if (existingRecruiter != null) {
             recruiterRepository.delete(existingRecruiter);
             return true;
